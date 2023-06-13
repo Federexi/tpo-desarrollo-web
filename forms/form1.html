@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="../ingreso2.html">TechPro Support</a>
+            </div>
+        </nav>
+    </header>
+
+    <h1>Encuesta de satisfacción</h1>
+    <form class="formEncuestas">
+        <div class="form-group text-center">
+            <label for="nombre">Nombre</label>
+            <br>
+            <input type="text" id="nombre" name="nombre:">
+        </div>
+        <div class="form-group text-center">
+            <label for="apellido">Apellido</label>
+            <br>
+            <input type="text" id="apellido" name="apellido:">
+        </div>
+        <div class="form-group text-center">
+            <label for="opinion_compania">¿Cambiarías algo de la compañía?</label>
+            <br>
+            <input type="text" id="opinion" name="¿cambiarias algo de la compañia?">
+        </div>
+        <div>
+            <button type="submit" id="login">Enviar</button>
+        </div>
+    </form>
+
+    <footer></footer>
+    
+
+   <script>
+        const form = document.querySelector("form"); //seleciona el formulario
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const fd = new FormData(form);
+            const obj = Object.fromEntries(fd);
+            
+            const json = JSON.stringify(obj); //convierte las respuestas en un objeto para después convertirlo en un json
+            localStorage.setItem("form", json); //lo guardamos en el local storage
+
+            const uniqueId = 1 // Generamos un id único
+            localStorage.setItem("formCompleted", uniqueId); // guardamos el id único que marca el formulario como completado
+
+            window.location.href = "/formsCompletados/form1_completado.html"
+        })
+
+    </script>
+</body>
+</html>

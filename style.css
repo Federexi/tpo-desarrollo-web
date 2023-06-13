@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+.form, .formEncuestas{
+    background-color: #9DB2BF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.navbar {
+    background-color: #526D82;
+}
+
+.completed {
+    font-size: 40px;
+    display: flex;
+}
+
+#emailText{
+    margin-left: 50px;
+}
+
+#email, #password, #nombre,
+#apellido, #opinion{
+    border:0;
+    margin-bottom: 8px;
+    border-bottom:1px solid #555;  
+    background:transparent;
+    padding:8px 0 5px 0;
+}
+
+#opinion {
+    margin-bottom: 20px;
+}
+
+#email:focus, #password:focus, #nombre:focus,
+#apellido:focus, #opinion:focus{
+    border:none;	
+    outline:none;
+    border-bottom:1px solid #e74c3c;
+}
+
+#passwordText {
+    margin-left: 30px;
+}
+
+#staffText {
+    margin-bottom: 8px;
+}
+
+#login {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    background-color: #DDE6ED;
+    transition: 0.3s;
+}
+
+#login:hover {
+    background-color: #bbc2c8;
+    color: rgb(44, 44, 44);
+}
+
+#saludo {
+    margin-top: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.formEncuestas {
+    display: flex;
+    flex-direction: column;
+}
+
+.big {
+    font-weight: 800;
+}
+
+.mar {
+    margin-bottom: 50px;
+}
+
+footer {
+    background-color: #526D82;
+    position: fixed;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+
